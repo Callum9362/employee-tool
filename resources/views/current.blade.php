@@ -16,7 +16,19 @@
                   </tr>
                 </thead>
                 <tbody>
-
+                    @forelse ($employees as $employee)
+                    <tr>
+                        <td>{{$employee->id}}</td>
+                        <td>{{$employee->first}}</td>
+                        <td>{{$employee->last}}</td>
+                        <td>{{$employee->position}}</td>
+                        <td>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                    @empty
+                        <tr><td>There are no employees</td></tr>
+                    @endforelse
                 </tbody>
               </table>
         </div>
