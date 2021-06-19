@@ -20,6 +20,7 @@ Route::get('/', 'CurrentEmployeeController@index')->name('current-employee');
 
 // Add Employee Controller
 Route::get('/add', 'AddEmployeeController@index')->name('add-employee');
+Route::post('/addemployee', 'AddEmployeeController@create')->name('add');
 
 // Current Employee Controller
 Route::get('/delete', 'DeleteEmployeeController@index')->name('delete-employee');
