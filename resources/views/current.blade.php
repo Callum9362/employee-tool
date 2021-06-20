@@ -8,7 +8,7 @@
             <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">ID</th>
                     <th scope="col">First</th>
                     <th scope="col">Last</th>
                     <th scope="col">Posistion</th>
@@ -23,7 +23,8 @@
                         <td>{{$employee->last}}</td>
                         <td>{{$employee->position}}</td>
                         <td>
-                            <button class="btn btn-danger btn-sm">Delete</button>
+                            <a class="btn-link btn-success btn-sm text-white">More Info</a>
+                            <a class="btn-link btn-danger btn-sm text-white">Delete</a>
                         </td>
                     </tr>
                     @empty
