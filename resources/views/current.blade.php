@@ -23,7 +23,11 @@
                         <td>{{$employee->last}}</td>
                         <td>{{$employee->position}}</td>
                         <td>
-                            <a class="btn-link btn-success btn-sm text-white">More Info</a>
+                            <a
+                            href="{{ route('details-employee', ['userID' => $employee->id]) }}"
+                            class="btn-link btn-success btn-sm text-white">
+                                More Info
+                            </a>
                             <a class="btn-link btn-danger btn-sm text-white">Delete</a>
                         </td>
                     </tr>
