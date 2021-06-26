@@ -9,15 +9,24 @@
                 @csrf
                 <div class="form-group">
                     <label>First Name</label>
-                    <input type="text" class="form-control" name="first" placeholder="Enter First Name" required>
+                    <input type="text" class="form-control @error('first') border-danger @enderror" name="first" placeholder="Enter First Name" required>
+                    @error('first')
+                        <span class="text-danger">{{ $message}}</span>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <label>Last Name</label>
-                    <input type="text" class="form-control" name="last" placeholder="Enter Last Name" required>
+                    <input type="text" class="form-control @error('last') border-danger @enderror" name="last" placeholder="Enter Last Name" required>
+                    @error('last')
+                        <span class="text-danger">{{ $message}}</span>
+                    @enderror
                   </div>
                   <div class="form-group">
                     <label>Position</label>
-                    <input type="text" class="form-control" name="position" placeholder="Enter Posistion" required>
+                    <input type="text" class="form-control @error('position') border-danger @enderror" name="position" placeholder="Enter Posistion" required>
+                    @error('position')
+                        <span class="text-danger">{{ $message}}</span>
+                    @enderror
                   </div>
                   <button type="submit" class="btn btn-primary">Add</button>
             </form>

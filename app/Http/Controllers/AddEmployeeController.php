@@ -15,9 +15,9 @@ class AddEmployeeController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            'first' => 'required',
-            'last' => 'required',
-            'position' => 'required'
+            'first' => 'required|string|max:20',
+            'last' => 'required|string|max:20',
+            'position' => 'required|string|max:20'
         ]);
 
         Employee::create([
