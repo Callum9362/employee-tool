@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 // Current Employee Routes
 Route::get('/', 'CurrentEmployeeController@index')->name('current-employee');
 // Delete Employee
-Route::post('/', 'CurrentEmployeeController@delete')->name('delete-employee');
+Route::post('/deleted', 'CurrentEmployeeController@delete')->name('delete-employee');
 
 // Add Employee Routes
 Route::get('/add', 'AddEmployeeController@index')->name('add-employee');
