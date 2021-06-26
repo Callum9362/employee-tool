@@ -11,7 +11,14 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="{{ route('add-employee') }}">Add Employee</a>
+            <a
+            class="nav-link @if (Request::routeIs('current-employee')) active @endif"
+            href="{{ route('current-employee') }}">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a
+            class="nav-link @if (Request::routeIs('add-employee')) active @endif"
+            href="{{ route('add-employee') }}">Add Employee</a>
         </li>
       </ul>
     </div>
