@@ -5,6 +5,7 @@
         <div class="col-1"></div>
         <div class="col-10">
             <h3 class="text-center">List of Current Employees</h3>
+            <span>Total Number of Employees: {{$employees->count()}}</span>
             <table class="table table-striped">
                 <thead>
                   <tr>
