@@ -17,13 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 // Current Employee Routes
 Route::get('/', 'CurrentEmployeeController@index')->name('current-employee');
+// Delete Employee
+Route::post('/', 'CurrentEmployeeController@delete')->name('delete-employee');
 
 // Add Employee Routes
 Route::get('/add', 'AddEmployeeController@index')->name('add-employee');
 Route::post('/addemployee', 'AddEmployeeController@create')->name('add');
-
-// Delete Employee Routes
-Route::get('/delete', 'DeleteEmployeeController@index')->name('delete-employee');
 
 // More Details Routes
 Route::get('/details/{userID}', 'MoreDetailsController@index')->name('details-employee');
